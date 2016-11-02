@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Xbim.Ifc;
-using Xbim.Ifc4.Interfaces; //IFC4 interfaces are also implemented in our IFC2x3 schema implementation
+using Xbim.Ifc4.Interfaces; 
 
 
 namespace IFCTree
@@ -23,36 +23,38 @@ namespace IFCTree
         private void Form1_Load(object sender, EventArgs e)
         {
             const string fileName = "office.ifc"; //this can be either IFC2x3 or IFC4
+            // editor credentials are required for IFCStore object
             var editor = new XbimEditorCredentials
             {
-                ApplicationDevelopersName = "You",
-                ApplicationFullName = "Your app",
-                ApplicationIdentifier = "Your app ID",
+                ApplicationDevelopersName = "Hassan Emam",
+                ApplicationFullName = "IFCTreeView",
+                ApplicationIdentifier = "Version 01",
                 ApplicationVersion = "4.0",
                 //your user
                 EditorsFamilyName = "Emam",
                 EditorsGivenName = "Hassan",
-                EditorsOrganisationName = "Logikal"
+                EditorsOrganisationName = "Emam Tech"
             };
+            // Open the IFC file for reading the required data. Operations have to be performed within the using scope
             using (var model = IfcStore.Open(fileName, editor, true))
             {
                 using (var txn = model.BeginTransaction("Quick start transaction"))
                 {
-                    //get all walls in the model
+                    //get all BuildingElements in the model
                     var bldgElements = model.Instances.OfType<IIfcBuildingElement>();
+                    //get all Building Stories in the model
                     var stories = model.Instances.OfType<IIfcBuildingStorey>();
-                    //iterate over all the walls and change them
+                    //iterate over all the stories and add them to the treeView
                     foreach (var story in stories)
                     {
                         Console.WriteLine(story.Name);
                         TreeNode level = new TreeNode();
                         level.Text= story.Name;
                         treeView1.Nodes.Add(level);
+                        //iterate over all building elements and add to the level
                         foreach (var element in bldgElements)
                         {
-                            //story.Name = story.Name;
-                            //IIfcPhysicalSimpleQuantity area = story.
-                            //Console.WriteLine(story.IsDefinedBy.ToString());
+
                             if (element.IsContainedIn == story)
                             {
                                 TreeNode child = new TreeNode();
@@ -60,8 +62,6 @@ namespace IFCTree
                                 level.Nodes.Add(child);
                                 Console.WriteLine(element.Name + " " + element.IsContainedIn.Name + " " + element.GetType().Name);
                             }
-
-                            //Console.WriteLine("\t" + wall.ConnectedFrom.ToString() + story);
                         }
                     }
 
