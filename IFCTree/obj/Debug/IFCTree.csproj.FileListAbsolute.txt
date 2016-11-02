@@ -40,3 +40,45 @@ c:\users\hemam\documents\visual studio 2015\Projects\IFCTree\IFCTree\bin\Debug\X
 c:\users\hemam\documents\visual studio 2015\Projects\IFCTree\IFCTree\bin\Debug\Xbim.Tessellator.xml
 c:\users\hemam\documents\visual studio 2015\Projects\IFCTree\IFCTree\obj\Debug\IFCTree.exe
 c:\users\hemam\documents\visual studio 2015\Projects\IFCTree\IFCTree\obj\Debug\IFCTree.pdb
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\IFCTree.exe.config
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\obj\Debug\IFCTree.exe
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\obj\Debug\IFCTree.pdb
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\IFCTree.exe
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\IFCTree.pdb
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\Esent.Interop.dll
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\log4net.dll
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\Xbim.CobieExpress.dll
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\Xbim.Common.dll
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\Xbim.Ifc.dll
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\Xbim.Ifc.Extensions.dll
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\Xbim.Ifc2x3.dll
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\Xbim.Ifc2x3.IO.dll
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\Xbim.Ifc4.dll
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\Xbim.IO.dll
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\Xbim.Tessellator.dll
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\Esent.Interop.pdb
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\Esent.Interop.xml
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\log4net.xml
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\Xbim.CobieExpress.pdb
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\Xbim.CobieExpress.xml
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\Xbim.Common.pdb
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\Xbim.Common.xml
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\Xbim.Ifc.pdb
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\Xbim.Ifc.xml
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\Xbim.Ifc.Extensions.pdb
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\Xbim.Ifc.Extensions.xml
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\Xbim.Ifc2x3.pdb
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\Xbim.Ifc2x3.xml
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\Xbim.Ifc2x3.IO.pdb
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\Xbim.Ifc2x3.IO.xml
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\Xbim.Ifc4.pdb
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\Xbim.Ifc4.xml
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\Xbim.IO.pdb
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\Xbim.IO.xml
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\Xbim.Tessellator.pdb
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\bin\Debug\Xbim.Tessellator.xml
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\obj\Debug\IFCTree.csprojResolveAssemblyReference.cache
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\obj\Debug\IFCTree.Form1.resources
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\obj\Debug\IFCTree.Properties.Resources.resources
+C:\Users\Hassan\Source\Repos\IFCTree\IFCTree\obj\Debug\IFCTree.csproj.GenerateResource.Cache

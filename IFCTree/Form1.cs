@@ -110,8 +110,15 @@ namespace IFCTree
             Console.WriteLine(treeView1.SelectedNode.Tag);
             var type = treeView1.SelectedNode.Tag.GetType();
             var selectedElement = treeView1.SelectedNode.Tag;
+            if (selectedElement is IIfcBuildingElement)
+            {
+                IIfcBuildingElement element = (IIfcBuildingElement)selectedElement;
+                lblName.Text = element.Name;
+                lblType.Text = element.ToString();
+            }
+            
 
-            label1.Text = selectedElement.ToString();
+            
         }
     }
 }
