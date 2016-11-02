@@ -50,8 +50,10 @@ namespace IFCTree
                     var bldgElements = model.Instances.OfType<IIfcBuildingElement>();
                     //get all Building Stories in the model
                     var stories = model.Instances.OfType<IIfcBuildingStorey>();
+                    // get the project object
                     var project = model.Instances.FirstOrDefault<IIfcProject>();
                     TreeNode projectNode = new TreeNode();
+                    projectNode.Tag = project;
                     projectNode.Text = project.Name.Value;
                     treeView1.Nodes.Add(projectNode);
                     //iterate over all the stories and add them to the treeView
@@ -59,8 +61,10 @@ namespace IFCTree
                     {
                         Console.WriteLine(story.Name);
                         TreeNode level = new TreeNode();
-                        projectNode.Nodes.Add(level);
                         level.Text = story.Name;
+                        level.Tag = story;
+                        projectNode.Nodes.Add(level);
+                        
                         //treeView1.Nodes.Add(level);
                         //iterate over all building elements and add to the level
                         foreach (var element in bldgElements)
@@ -70,6 +74,7 @@ namespace IFCTree
                             {
                                 TreeNode child = new TreeNode();
                                 child.Text = element.Name;
+                                child.Tag = element;
                                 level.Nodes.Add(child);
                                 Console.WriteLine(element.Name + " " + element.IsContainedIn.Name + " " + element.GetType().Name);
                             }
@@ -96,6 +101,13 @@ namespace IFCTree
             {
                 fileName = openFileDialog1.FileName;
             }
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            Console.WriteLine(treeView1.SelectedNode.Tag);
+            var selectedElement = treeView1.SelectedNode.Tag;
+            label1.Text = selectedElement.ToString();
         }
     }
 }
