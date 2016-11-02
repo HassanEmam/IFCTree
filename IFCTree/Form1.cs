@@ -29,7 +29,9 @@ namespace IFCTree
         private void button2_Click(object sender, EventArgs e)
         {
             //const string fileName = "office.ifc"; //this can be either IFC2x3 or IFC4
+            treeView1.Nodes.Clear();
             // editor credentials are required for IFCStore object
+
             var editor = new XbimEditorCredentials
             {
                 ApplicationDevelopersName = "Hassan Emam",
@@ -88,7 +90,7 @@ namespace IFCTree
                 }
 
                 //save your changed model. IfcStore will use the extension to save it as *.ifc, *.ifczip or *.ifcxml.
-                model.SaveAs("WallOnly-Modified.ifc");
+                model.SaveAs(fileName+"-Modified.ifc");
             }
         }
 
@@ -106,7 +108,9 @@ namespace IFCTree
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
             Console.WriteLine(treeView1.SelectedNode.Tag);
+            var type = treeView1.SelectedNode.Tag.GetType();
             var selectedElement = treeView1.SelectedNode.Tag;
+
             label1.Text = selectedElement.ToString();
         }
     }
