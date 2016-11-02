@@ -44,13 +44,18 @@ namespace IFCTree
                     var bldgElements = model.Instances.OfType<IIfcBuildingElement>();
                     //get all Building Stories in the model
                     var stories = model.Instances.OfType<IIfcBuildingStorey>();
+                    var project = model.Instances.FirstOrDefault<IIfcProject>();
+                    TreeNode projectNode = new TreeNode();
+                    projectNode.Text = project.Name.Value;
+                    treeView1.Nodes.Add(projectNode);
                     //iterate over all the stories and add them to the treeView
                     foreach (var story in stories)
                     {
                         Console.WriteLine(story.Name);
                         TreeNode level = new TreeNode();
+                        projectNode.Nodes.Add(level);
                         level.Text= story.Name;
-                        treeView1.Nodes.Add(level);
+                        //treeView1.Nodes.Add(level);
                         //iterate over all building elements and add to the level
                         foreach (var element in bldgElements)
                         {

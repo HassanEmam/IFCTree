@@ -1,7 +1,7 @@
 ISO-10303-21;
 HEADER;
 FILE_DESCRIPTION ((''), '2;1');
-FILE_NAME ('', '2016-11-02T13:14:11', (''), (''), 'Xbim File Processor version 4.0.0.0', 'Xbim version 4.0.0.0', '');
+FILE_NAME ('', '2016-11-02T13:29:15', (''), (''), 'Xbim File Processor version 4.0.0.0', 'Xbim version 4.0.0.0', '');
 FILE_SCHEMA (('IFC2X3'));
 ENDSEC;
 DATA;
