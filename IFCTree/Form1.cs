@@ -15,6 +15,7 @@ namespace IFCTree
 {
     public partial class Form1 : Form
     {
+        string fileName;
         public Form1()
         {
             InitializeComponent();
@@ -22,7 +23,12 @@ namespace IFCTree
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            const string fileName = "office.ifc"; //this can be either IFC2x3 or IFC4
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //const string fileName = "office.ifc"; //this can be either IFC2x3 or IFC4
             // editor credentials are required for IFCStore object
             var editor = new XbimEditorCredentials
             {
@@ -54,7 +60,7 @@ namespace IFCTree
                         Console.WriteLine(story.Name);
                         TreeNode level = new TreeNode();
                         projectNode.Nodes.Add(level);
-                        level.Text= story.Name;
+                        level.Text = story.Name;
                         //treeView1.Nodes.Add(level);
                         //iterate over all building elements and add to the level
                         foreach (var element in bldgElements)
@@ -78,6 +84,17 @@ namespace IFCTree
 
                 //save your changed model. IfcStore will use the extension to save it as *.ifc, *.ifczip or *.ifcxml.
                 model.SaveAs("WallOnly-Modified.ifc");
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.InitialDirectory = Environment.CurrentDirectory;
+            openFileDialog1.Filter = "IFC file| *.ifc";
+            DialogResult result = openFileDialog1.ShowDialog();
+            if(result==DialogResult.OK)
+            {
+                fileName = openFileDialog1.FileName;
             }
         }
     }
